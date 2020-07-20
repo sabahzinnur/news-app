@@ -14,6 +14,57 @@ class RegisterController extends ApiController
 {
     /**
      * Register user
+     * @OA\Post(
+     *     path="/register",
+     *     tags={"register"},
+     *     summary="User sing up",
+     *     description="User sing up endpoint",
+     *     operationId="register",
+     *     @OA\Parameter(
+     *         name="email",
+     *         description="User email",
+     *         in="query",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="password",
+     *         description="User password",
+     *         in="query",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="c_password",
+     *         description="User password confirmation",
+     *         in="query",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="name",
+     *         description="User name",
+     *         in="query",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="successful operation"
+     *     ),
+     *     @OA\Response(
+     *         response=422,
+     *         description="Validation error"
+     *     )
+     * )
      *
      * @param Request $request
      * @return JsonResponse

@@ -86,11 +86,20 @@ class NewsController extends ApiController
 
     /**
      * @OA\Get(
-     *     path="/articles/{id}",
+     *     path="/article/{id}",
      *     tags={"article"},
      *     summary="Get article by id",
      *     description="Get news article by News->id",
      *     operationId="getArticle",
+     *     @OA\Parameter(
+     *         name="id",
+     *         description="News->id",
+     *         in="path",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
      *     @OA\Response(
      *         response=200,
      *         description="successful operation"
