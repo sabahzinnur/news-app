@@ -23,7 +23,7 @@
 ## Install project
 * Install Docker: [macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac) | [Linux](https://docs.docker.com/engine/install/ubuntu/) | [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * Install [Docker Compose](https://docs.docker.com/compose/install/#install-compose)
-* (optional) Clone project from `git clone git@github.com:sabahzinnur/news_test_app.git`
+* (optional) Clone project from `git clone git@github.com:sabahzinnur/news-app.git`
 * Go to project directory `cd news-app/backend`
 * Run command `make install`
 * Edit `/etc/hosts` file. 
