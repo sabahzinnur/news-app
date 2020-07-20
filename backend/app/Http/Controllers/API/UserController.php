@@ -11,6 +11,23 @@ use Illuminate\Support\Facades\Validator;
 class UserController extends ApiController
 {
     /**
+     * /**
+     * @OA\Get(
+     *     path="/profile",
+     *     tags={"profile"},
+     *     summary="Get user profile",
+     *     description="Get user profile",
+     *     operationId="getUserProfile",
+     *     @OA\Response(
+     *         response=200,
+     *         description="successful operation"
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="User not found"
+     *     )
+     * )
+     *
      * @param Request $request
      * @return JsonResponse
      */
@@ -24,6 +41,63 @@ class UserController extends ApiController
     }
 
     /**
+     * Register user
+     * @OA\Post(
+     *     path="/profile",
+     *     tags={"profile"},
+     *     summary="Users profile update",
+     *     description="User profile update",
+     *     operationId="profile update",
+     *     @OA\Parameter(
+     *         name="first_name",
+     *         description="User first name",
+     *         in="query",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="second_name",
+     *         description="User second name",
+     *         in="query",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="patronymic",
+     *         description="User patronymic",
+     *         in="query",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="birthday",
+     *         description="User birthday",
+     *         in="query",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="birthday",
+     *         description="User birthday",
+     *         in="query",
+     *         @OA\Schema(
+     *             type="date"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="successful operation"
+     *     ),
+     *     @OA\Response(
+     *         response=422,
+     *         description="Validation error"
+     *     )
+     * )
+     *
      * @param Request $request
      * @return JsonResponse
      */
