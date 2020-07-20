@@ -4,7 +4,8 @@
      <div class="box columns">
        <div class="column is-3-tablet is-3-desktop is-3-widescreen is-centered">
          <figure class="image is-128x128">
-           <img src="https://bulma.io/images/placeholders/128x128.png">
+           <img class="is-rounded" :src="formData.avatar" v-if="formData.avatar">
+           <img v-else class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
          </figure>
        </div>
        <div class="column is-9-tablet is-9-desktop is-9-widescreen pl-6">
@@ -51,10 +52,29 @@
                <input type="date"
                       v-model="formData.birthday"
                       placeholder="Enter birthday"
-                      class="input" />
+                      class="input"/>
                <span class="icon is-small is-left">
                   <i class="fa fa-calendar"></i>
                 </span>
+             </div>
+           </div>
+           <div class="field">
+             <div class="file">
+               <label class="file-label">
+                 <input class="file-input"
+                        type="file"
+                        name="resume"
+                        @change="onFileChange($event)"
+                        accept="image/jpeg,image/png,image/gif">
+                 <span class="file-cta">
+                    <span class="file-icon">
+                     <i class="fas fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                      Choose an avatar…
+                    </span>
+                 </span>
+               </label>
              </div>
            </div>
            <div class="field">
@@ -79,7 +99,9 @@ export default {
         first_name: '',
         second_name: '',
         patronymic: '',
-        birthday: null
+        birthday: null,
+        avatar: '',
+        image: null
       }
     }
   },
@@ -94,6 +116,10 @@ export default {
     },
     fillForm () {
       this.formData = Object.assign(this.formData, this.$store.getters.user.credentials)
+    },
+    onFileChange (e) {
+      this.formData.image = e.target.files[0]
+      this.formData.avatar = URL.createObjectURL(this.formData.image)
     }
   }
 }

@@ -29,7 +29,8 @@
 * Edit `/etc/hosts` file. 
     * Add `127.0.0.1 news.test` for API host
 * (optional) If you need frontend app. Go to project directory `cd news-app/frontend`
-    Run command `yarn run build` or `npm run build`. Application will be available on http://localhost:8080  
+    Run command `yarn install` or `npm install`.
+    Run command `yarn run serve` or `npm run serve`. Application will be available on http://localhost:8080  
 * Done
 
 ## Access
