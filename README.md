@@ -23,13 +23,13 @@
 ## Install project
 * Install Docker: [macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac) | [Linux](https://docs.docker.com/engine/install/ubuntu/) | [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * Install [Docker Compose](https://docs.docker.com/compose/install/#install-compose)
-* (optional) Clone project from `git clone git@bitbucket.org:srx_rws/rws_back.git`
+* (optional) Clone project from `git clone git@github.com:sabahzinnur/news_test_app.git`
 * Go to project directory `cd news-app/backend`
 * Run command `make install`
 * Edit `/etc/hosts` file. 
     * Add `127.0.0.1 news.test` for API host
-* (optional) If you need frontend app. Go to project directory `cd news-app/backend`
-    Run command `yarn run build` or `npm run build` 
+* (optional) If you need frontend app. Go to project directory `cd news-app/frontend`
+    Run command `yarn run build` or `npm run build`. Application will be available on http://localhost:8080  
 * Done
 
 ## Access
