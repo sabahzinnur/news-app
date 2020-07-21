@@ -41,7 +41,6 @@
     *DB_USERNAME=sabah
     *DB_PASSWORD=secret
 * Hosts
-    * Traefik dashboard http://localhost:8000 (see `.env`)    
     * Backend API http://news.test (see `.env`)
 
 ## Start, stop and restart
